@@ -3,17 +3,18 @@ import {Cell} from '../cell/Cell';
 import './Board.css';
 
 
-export const Board = () => {
-  const cellValues = ['X', 'X', 'X', 'O', 'O', 'X', 'O', '', ''];
-  const winningCombination= [0, 1, 2 ];
-  
-  const cells = cellValues.map((value, index) => {
-      const canHighlight = winningCombination && winningCombination.indexOf(index) >= 0;
+export const Board = (props) => {
+
+
+  const cells = props.cellValues.map((value, index) => {
+      const canHighlight = props.winningCombination && 
+      props.winningCombination.indexOf(index) >= 0;
 
      return <Cell 
      key={index} 
      value={value} 
-     canHighlight={canHighlight} />
+     canHighlight={canHighlight} 
+     onClick={() => props.cellClicked(index) }/>;
   });
 
   return (
