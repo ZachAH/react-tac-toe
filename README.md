@@ -4,7 +4,7 @@
 This is a playable game of tic-tac-toe. Using react for the framework. Its fast, simple, and easy to play!
 
 
-![Screenshot (181)](https://user-images.githubusercontent.com/68923037/116732076-33016600-a9b0-11eb-80b3-89ea8e3a959c.png)
+![Screenshot (184)](https://user-images.githubusercontent.com/68923037/117060079-22215f00-ace6-11eb-8711-9167806f4763.png)
 
  
 <br/>
