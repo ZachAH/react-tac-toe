@@ -10,7 +10,7 @@ const winningMatrix = {
     8: [[6,7],[2,5],[0,4]]
 };
 
-export const calculateWinner = (cellValues, cellIndex) => {
+export const calculateWinner = (cellValues, numberOfTurnsLeft, cellIndex) => {
     const winningRanges = winningMatrix[cellIndex];
     
     for(let i = 0; i < winningRanges.length; i++) {
@@ -26,6 +26,14 @@ export const calculateWinner = (cellValues, cellIndex) => {
             };
         }
     }
+
+    if (numberOfTurnsLeft === 0) {
+        return {
+            hasResult: true,
+            winner: undefined,
+            winningCombination: []
+        };
+    };
     
     return {
         hasResult: false,
